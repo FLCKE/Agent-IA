@@ -1,11 +1,5 @@
-# app.py
 import streamlit as st
 import subprocess
-
-# Après :
-# run_id = log_to_langsmith(user_msg, reply, model)
-# st.caption(f"🧩 Run logué sur LangSmith : {run_id}")
-
 
 
 st.set_page_config(page_title="Chat Ollama", page_icon="🤖")
@@ -14,12 +8,8 @@ st.caption("Modèles locaux via Ollama — ex: mistral, gemma2:2b, llama3.1")
 
 # --- Sidebar : paramètres ---
 with st.sidebar:
-    model = st.selectbox(
-        "Choisir un modèle Ollama :",
-        ["mistral", "gemma3", "llama3"],
-        index=0  # mistral par défaut
-    )
-    st.markdown("Exemples : `mistral`, `gemma3`, `llama3`")
+    model =  "gemma3"
+    st.markdown("le model c est gemma3")
     st.divider()
 
 # --- Mémoire de chat ---
@@ -66,9 +56,11 @@ if user_msg:
         with st.spinner("L'agent réfléchit..."):
             reply = call_ollama(model, user_msg)
         st.markdown(reply)
-    prompt="Analyse moi cette reponse de la question precedente et donne moi une note de 1 a 5 en pertinence, exactitude, clarté, cohérence, style/ton. Reponds au format JSON { 'pertinence':X, 'exactitude':X, 'clarte':X, 'coherence':X, 'style_ton':X } ou X est la note correspondante. Justifie chaque note en une phrase courte apres le JSON. Voici la reponse a analyser : " + reply
-    reply = call_ollama(model, prompt )
-    st.write(reply)
+
+    # Analyse de la réponse     
+    # prompt="Analyse moi cette reponse de la question precedente et donne moi une note de 1 a 5 en pertinence, exactitude, clarté, cohérence, style/ton. Reponds au format JSON { 'pertinence':X, 'exactitude':X, 'clarte':X, 'coherence':X, 'style_ton':X } ou X est la note correspondante. Justifie chaque note en une phrase courte apres le JSON. Voici la reponse a analyser : " + reply
+    # reply = call_ollama(model, prompt )
+    # st.write(reply)
 
     # Stocke la réponse
     st.session_state.messages.append({"role": "assistant", "content": reply})
