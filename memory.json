@@ -1,0 +1,26 @@
+{
+  "summary_mem": {
+    "summary": "Résumé :\n\nLe participant s'appelle Louis et est développeur full stack. Il réside à Paris. L'assistant a confirmé ces informations en fonction des réponses fournies par l'utilisateur. Aucune autre information n'a été échangée.",
+    "buffer": [
+      {
+        "role": "user",
+        "content": "ou excatement"
+      },
+      {
+        "role": "ai",
+        "content": "Louis."
+      },
+      {
+        "role": "user",
+        "content": "oui"
+      },
+      {
+        "role": "ai",
+        "content": "Ok."
+      }
+    ]
+  },
+  "slots": {
+    "name": "Louis"
+  }
+}
