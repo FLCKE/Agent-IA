@@ -1,0 +1,6 @@
+Question,Reponse_agent,Sources(top3)
+Quels sont les droits principaux d’un utilisateur selon le document ?,Je ne trouve pas l'information dans le document fourni.,chunk=179 sim=0.711 | chunk=388 sim=0.692 | chunk=359 sim=0.673
+Dans quels cas un utilisateur peut-il demander la suppression de ses données ?,Je ne trouve pas l'information dans le document fourni.,chunk=120 sim=0.621 | chunk=423 sim=0.617 | chunk=121 sim=0.616
+Quel délai est indiqué pour répondre à une demande utilisateur ?,"Le responsable du traitement informe la personne conc à besoin de deux mois, compte tenu de la complexité et du nombre de demandes.",chunk=121 sim=0.575 | chunk=490 sim=0.575 | chunk=116 sim=0.574
+À qui l’utilisateur peut-il adresser une réclamation ?,L'utilisateur peut adresser une réclamation à l'auteur de la réclamation.,chunk=454 sim=0.694 | chunk=445 sim=0.668 | chunk=483 sim=0.654
+Le document mentionne-t-il des conditions ou limites à ces droits ?,Oui.,chunk=192 sim=0.683 | chunk=632 sim=0.677 | chunk=179 sim=0.660
